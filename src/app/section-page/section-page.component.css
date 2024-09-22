@@ -1,0 +1,28 @@
+/* CSS for the main container */
+.main-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 5rem;
+}
+
+/* CSS for the left container */
+.left-section {
+    padding: 2.5rem 2rem;
+    border-right: 0.03rem solid #253443;
+    width: 50%;
+    font-family: "Jost", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+}
+
+/* CSS for the right container */
+.right-section {
+    padding: 0 2rem;
+    width: 50%;
+    font-family: "Jost", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+}

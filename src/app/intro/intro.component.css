@@ -1,0 +1,10 @@
+/* CSS for the profile image */
+.image {
+    max-width: 65%;
+    max-height: 70%;
+    float: right;
+}
+
+h2 {
+    font-style: italic;
+}

@@ -1,0 +1,8 @@
+<div>
+    <label #formLabel [htmlFor]="'connectWithMeInput'" class="form-label">{{label}}</label>
+</div>
+<input #formInput id='connectWithMeInput' [formControl]="control" class="form-input" />
+<ng-container *ngIf="control.touched && control.errors">
+    <div #errorMessage class="help is-danger" *ngIf="control.errors['required']">Required</div>
+    <div #errorMessage class="help is-danger" *ngIf="control.errors['pattern']">Invalid Format</div>
+</ng-container>

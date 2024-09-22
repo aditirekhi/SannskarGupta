@@ -1,0 +1,35 @@
+.technical-skills-container {
+    display: flex;
+    justify-content: center;
+}
+
+.info-list {
+    margin: 2.5rem 0;
+    width: 100%;
+
+    &.education {
+        list-style-type: none;
+    }
+
+    &.technical-skills {
+        list-style-type: disc;
+        font-size: 1rem;
+    }
+}
+
+.info-list li {
+    margin: 1rem 0;
+}
+
+.degree {
+    font-size: 1.3rem;
+}
+
+.timeline {
+    float: right;
+}
+
+.institute-timeline {
+    font-size: 1rem;
+    color: #cf8e76;
+}

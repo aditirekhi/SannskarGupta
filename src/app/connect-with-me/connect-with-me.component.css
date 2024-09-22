@@ -1,0 +1,122 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center !important;
+    /* padding: 1.5rem; */
+    font-family: "Eczar", serif;
+    font-style: normal;
+}
+
+.message {
+    font-family: "Eczar", serif;
+    font-size: 1.2rem;
+    font-weight: lighter;
+    color: #40647b;
+}
+
+/* CSS for basic button */
+.btn-basic {
+    margin: 2rem;
+    background-color: inherit;
+    border: none;
+    font-size: 1.4rem;
+    color: #385067;
+}
+
+.btn-basic:hover {
+    color: #E2D9D1;
+}
+
+/* CSS for modal */
+.modal {
+    font-family: "Eczar", serif;
+    color: #385067;
+}
+
+.modal-footer {
+    padding: 0 !important;
+}
+
+/* CSS for modal button */
+.btn-modal:hover {
+    color: #87b2db !important;
+}
+
+.btn-modal {
+    font-size: 1rem !important;
+    margin: 1rem !important;
+}
+
+/* CSS for the tick mark */
+.wrapper {
+    height: 4vh;
+    background-color: inherit !important;
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #eee
+}
+
+/* .checkmark__circle {
+    stroke-dasharray: 166;
+    stroke-dashoffset: 166;
+    stroke-width: 1;
+    stroke-miterlimit: 10;
+    stroke: #e2ccb8;
+    fill: none;
+    animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards
+} */
+
+.validation_mark {
+    width: fit-content !important;
+    height: 4vh;
+    border-radius: 50%;
+    display: block;
+    stroke-width: 2;
+    stroke: #385067;
+    stroke-miterlimit: 10;
+    margin: 1rem 0.5rem;
+    box-shadow: inset 0px 0px 0px #e2ccb8;
+    animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both
+}
+
+.checkmark__check {
+    transform-origin: 50% 50%;
+    stroke-dasharray: 48;
+    stroke-dashoffset: 48;
+    animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards
+}
+
+@keyframes stroke {
+    100% {
+        stroke-dashoffset: 0
+    }
+}
+
+@keyframes scale {
+
+    0%,
+    100% {
+        transform: none
+    }
+
+    50% {
+        transform: scale3d(1.1, 1.1, 1)
+    }
+}
+
+@keyframes fill {
+    100% {
+        box-shadow: inset 0px 0px 0px 30px #e2ccb8
+    }
+}
+
+/* CSS for the cross */
+.line {
+    transform-origin: 50% 50%;
+    stroke-dasharray: 48;
+    stroke-dashoffset: 48;
+    animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards
+}

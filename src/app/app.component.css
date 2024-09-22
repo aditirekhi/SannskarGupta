@@ -1,0 +1,72 @@
+/* CSS for the navbar */
+.nav {
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    width: 100vw;
+    font-size: 0.8rem;
+}
+
+.nav ul {
+    border-bottom: 0.08rem solid #253443;
+    padding: 0 0.5rem;
+    margin: 0;
+}
+
+.nav ul>li {
+    display: inline-block;
+    padding: 0.2rem 0;
+    margin: 0.4rem 0;
+    border-right: 0.03rem solid #253443;
+}
+
+.nav ul>li:last-child {
+    border-right: none;
+}
+
+/* CSS for the navbar buttons */
+.nav-btn {
+    background-color: inherit;
+    border: none;
+    color: #103147;
+}
+
+.nav-btn-active {
+    color: #ad5a5a;
+}
+
+.nav-btn:hover {
+    color: #ad5a5a;
+}
+
+/* CSS for the main container */
+.main-container {
+    height: 100%;
+}
+
+/* CSS for the sections */
+.main-container section {
+    display: block;
+    height: 100vh;
+    text-wrap: wrap;
+    word-wrap: break-word;
+    padding: 3.5rem;
+
+}
+
+.main-container section:nth-child(odd) {
+    background-color: #E2D9D1;
+    color: #1a4e71;
+}
+
+.main-container section:nth-child(even) {
+    background-color: #8B9AA0;
+    color: #385067;
+}
+
+/* CSS for the section header */
+title-text {
+    margin-top: 1rem;
+}

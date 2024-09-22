@@ -1,0 +1,11 @@
+.info-list {
+    margin: 2.5rem 0;
+    width: 100%;
+    display: block;
+    height: 5.5rem;
+}
+
+.info-list li {
+    margin: 1rem 0;
+    font-size: 1.2rem;
+}

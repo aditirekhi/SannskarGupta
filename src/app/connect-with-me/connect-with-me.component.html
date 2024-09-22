@@ -1,0 +1,50 @@
+<article #connectWithMeFormSection>
+    <div #formSubmission class="wrapper">
+        <ng-content #successfulBlock *ngIf="formSubmissionSuccessfull">
+            <svg class="validation_mark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52" #successAnimation>
+                <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+            </svg>
+            <span #successMessage class="message">Form submitted succesfully</span>
+        </ng-content>
+        <ng-content #failureBlock *ngIf="formSubmissionNotSuccessfull">
+            <svg class="validation_mark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52" #failureAnimation>
+                <path class="line" d="M 36.2 17.1 16.2 35.7" fill="none" />
+                <path class="line" d="M 16.2 17.1 36.2 35.7" fill="none" />
+            </svg>
+            <!-- <path class="line" /> -->
+            <span #failureMessage class="message">Error occurred</span>
+        </ng-content>
+    </div>
+
+    <form #connectWithMeFrm class="form" [formGroup]="connectWithMeForm" (ngSubmit)="formSubmitted()">
+        <app-form-input #nameControl [label]="'Name'" [control]="connectWithMeForm.controls.name"></app-form-input>
+        <app-form-input #emailControl [label]="'Email'" [control]="connectWithMeForm.controls.email"></app-form-input>
+        <app-form-input #phoneNumberControl [label]="'Phone Number'"
+            [control]="connectWithMeForm.controls.phoneNumber"></app-form-input>
+        <app-form-input #descriptionControl [label]="'Description'"
+            [control]="connectWithMeForm.controls.description"></app-form-input>
+        <button #submitBtn class="btn-basic">Submit</button>
+        <!-- data-bs-toggle="modal" data-bs-target="#confirmInfo" data-bs-dismiss="modal"-->
+    </form>
+</article>
+<!-- Modal -->
+<div #formConfirmationModal class="modal" tabindex="-1" id="confirmInfo" [ngStyle]="{'display':modalDisplayType}">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Confirm Information</h5>
+                <button type="button" class="btn-close" aria-label="Close" (click)="closeModal()"></button>
+            </div>
+            <div class="modal-body">
+                <div>Name: {{connectWithMeForm.controls.name.value}}</div>
+                <div>Email: {{connectWithMeForm.controls.email.value}}</div>
+                <div>Phone Number: {{connectWithMeForm.controls.phoneNumber.value}}</div>
+                <div>Description: {{connectWithMeForm.controls.description.value}}</div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn-basic btn-modal" (click)="closeModal()">Close</button>
+                <button type="button" class="btn-basic btn-modal" (click)="sendContactInfo()">Proceed</button>
+            </div>
+        </div>
+    </div>
+</div>
