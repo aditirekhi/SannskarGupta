@@ -9,19 +9,21 @@ import { ConnectWithMeComponent } from "./connect-with-me/connect-with-me.compon
 import { TitleComponent } from "./title/title.component";
 import { CommonModule } from '@angular/common';
 import { filter } from 'rxjs';
+import { ConstantsService } from './constants/constants.service';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [IntroComponent, ProjectsComponent, ExperienceComponent, EducationTechnicalSkillsComponent, InterestsLanguagesComponent, ConnectWithMeComponent, TitleComponent, CommonModule],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
+  providers: [ConstantsService]
 })
 export class AppComponent {
 
   @ViewChild('Home') homeTab!: ElementRef<HTMLElement>;
 
-  title = 'SanskaarPortfolio';
+  title = '';
   homeTabActive = false;
   experienceTabActive = false;
   educationTechnicalSkillsTabActive = false;
@@ -31,7 +33,9 @@ export class AppComponent {
   lastScrollTop = 0;
   browserRefresh!: boolean;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private _constants: ConstantsService) {
+    this.title = this._constants.APP_TITLE;
+  }
 
   ngOnInit() {
     this.router.events
@@ -58,7 +62,7 @@ export class AppComponent {
 
   activeTabCheck(tab: HTMLElement) {
     switch (tab.id) {
-      case 'Home': {
+      case this._constants.HOME_TAB: {
         this.homeTabActive = true;
         this.experienceTabActive = false;
         this.educationTechnicalSkillsTabActive = false;
@@ -67,7 +71,7 @@ export class AppComponent {
         this.connectWithMeTabActive = false;
         break;
       }
-      case 'Experience': {
+      case this._constants.EXPERIENCE_TAB: {
         this.homeTabActive = false;
         this.experienceTabActive = true;
         this.educationTechnicalSkillsTabActive = false;
@@ -76,7 +80,7 @@ export class AppComponent {
         this.connectWithMeTabActive = false;
         break;
       }
-      case 'EducationAndTechnicalSkills': {
+      case this._constants.EDUCATION_TECHNICAL_SKILLS_TAB: {
         this.homeTabActive = false;
         this.experienceTabActive = false;
         this.educationTechnicalSkillsTabActive = true;
@@ -85,7 +89,7 @@ export class AppComponent {
         this.connectWithMeTabActive = false;
         break;
       }
-      case 'Projects': {
+      case this._constants.PROJECTS_TAB: {
         this.homeTabActive = false;
         this.experienceTabActive = false;
         this.educationTechnicalSkillsTabActive = false;
@@ -94,7 +98,7 @@ export class AppComponent {
         this.connectWithMeTabActive = false;
         break;
       }
-      case 'InterestAndLanguages': {
+      case this._constants.INTERESTS_LANGUAGES_TAB: {
         this.homeTabActive = false;
         this.experienceTabActive = false;
         this.educationTechnicalSkillsTabActive = false;
@@ -103,7 +107,7 @@ export class AppComponent {
         this.connectWithMeTabActive = false;
         break;
       }
-      case 'ConnectWithMe': {
+      case this._constants.CONNECT_WITH_ME_TAB: {
         this.homeTabActive = false;
         this.experienceTabActive = false;
         this.educationTechnicalSkillsTabActive = false;
