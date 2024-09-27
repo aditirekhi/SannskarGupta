@@ -31,5 +31,5 @@
 
 .institute-timeline {
     font-size: 1rem;
-    color: #cf8e76;
+    color: var(--education-sub-header);
 }

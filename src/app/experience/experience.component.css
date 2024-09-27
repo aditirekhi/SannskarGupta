@@ -21,13 +21,13 @@
 
 /* CSS for the timeline pipe */
 .timeline {
-    border-right: 0.3rem solid #e4c7b6;
+    border-right: 0.3rem solid var(--timeline);
     padding-top: 2px;
     height: 100%;
 }
 
 .timeline.first {
-    border-left: 0.3rem solid #e4c7b6;
+    border-left: 0.3rem solid var(--timeline);
 }
 
 /* CSS for the end points */
@@ -36,7 +36,7 @@
     border-radius: 50%;
     height: 1rem;
     width: 0.9rem;
-    background-color: #e4c7b6;
+    background-color: var(--timeline);
     /* top: 0.2rem; */
     position: relative;
 
@@ -58,11 +58,11 @@
 .experience {
     width: 100%;
     position: relative;
-    background-color: #8B9AA0;
+    background-color: var(--main-container-even-background);
     font-family: "Eczar", serif;
     font-style: normal;
     font-size: 0.85rem;
-    color: #2e4963;
+    color: var(--experience-body);
     text-align: center;
 
     &.top {
@@ -81,14 +81,14 @@
 .exp-title {
     font-size: 1.2rem;
     font-weight: 500;
-    color: #2e4963;
+    color: var(--experience-header);
     /* color: #d5a594; */
 }
 
 .exp-company {
     font-size: 0.85rem;
     font-weight: 900;
-    color: #d5a594;
+    color: var(--experience-sub-header);
 }
 
 .exp-project {
