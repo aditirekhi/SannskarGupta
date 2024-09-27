@@ -12,7 +12,7 @@
     font-family: "Eczar", serif;
     font-size: 1.2rem;
     font-weight: lighter;
-    color: #40647b;
+    color: var(--form-submission-message);
 }
 
 /* CSS for basic button */
@@ -21,17 +21,17 @@
     background-color: inherit;
     border: none;
     font-size: 1.4rem;
-    color: #385067;
+    color: var(--form-basic-button);
 }
 
 .btn-basic:hover {
-    color: #E2D9D1;
+    color: var(--form-button-hover);
 }
 
 /* CSS for modal */
 .modal {
     font-family: "Eczar", serif;
-    color: #385067;
+    color: var(--modal-body);
 }
 
 .modal-footer {
@@ -40,7 +40,7 @@
 
 /* CSS for modal button */
 .btn-modal:hover {
-    color: #87b2db !important;
+    color: var(--modal-button) !important;
 }
 
 .btn-modal {
