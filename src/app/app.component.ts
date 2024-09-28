@@ -32,6 +32,7 @@ export class AppComponent {
   connectWithMeTabActive = false;
   lastScrollTop = 0;
   browserRefresh!: boolean;
+  showNavMenu: boolean = true;
 
   constructor(private router: Router, private _constants: ConstantsService) {
     this.title = this._constants.APP_TITLE;

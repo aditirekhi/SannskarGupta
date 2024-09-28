@@ -9,6 +9,12 @@
     font-size: 0.8rem;
 }
 
+.nav-button {
+    background: none;
+    border: none;
+    display: none;
+}
+
 .nav ul {
     border-bottom: 0.08rem solid var(--nav-basic);
     padding: 0 0.5rem;
@@ -69,4 +75,25 @@
 /* CSS for the section header */
 title-text {
     margin-top: 1rem;
+}
+
+/* CSS for mobile phones */
+@media only screen and (max-width:600px) {
+    .nav {
+        justify-content: start;
+    }
+
+    .nav-btn {
+        display: block;
+    }
+
+    .nav ul {
+        display: none;
+        height: fit-content;
+        list-style-type: none;
+    }
+
+    .main-container section {
+        height: 100vh;
+    }
 }

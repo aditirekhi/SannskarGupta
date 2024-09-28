@@ -6,5 +6,6 @@
     font-weight: bold;
     font-style: italic;
     text-align: center;
-    color: #24465e !important;
+    font-size: 200%;
+    color: var(--title) !important;
 }

@@ -1,5 +1,6 @@
 <nav class="nav" #navMenu>
-  <ul>
+  <button class="nav-button" (click)="!showNavMenu"><i class="fa fa-solid fa-minus"></i></button>
+  <ul *ngIf="showNavMenu">
     <li><button class="nav-btn" [ngClass]="{'nav-btn-active':homeTabActive}" (click)="scrollToTab(Home)"
         #homeNavBtn>Home</button></li>
     <li><button class="nav-btn" [ngClass]="{'nav-btn-active':experienceTabActive}" (click)="scrollToTab(Experience)"

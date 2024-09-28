@@ -10,8 +10,9 @@
 
 /* CSS for the left container */
 .left-section {
-    padding: 2.5rem 2rem;
-    border-right: 0.03rem solid #253443;
+    /* padding: 2.5rem 2rem; */
+    padding: 2vw 2.2vw;
+    border-right: 0.03rem solid var(--section-divider);
     width: 50%;
     font-family: "Jost", sans-serif;
     font-optical-sizing: auto;
@@ -20,9 +21,30 @@
 
 /* CSS for the right container */
 .right-section {
-    padding: 0 2rem;
+    /* padding: 0 2rem; */
+    padding: 0 2vw;
     width: 50%;
     font-family: "Jost", sans-serif;
     font-optical-sizing: auto;
     font-weight: bold;
+}
+
+@media only screen and (max-width:600px) {
+    .main-container {
+        flex-direction: column;
+        padding: 0;
+        justify-content: center;
+    }
+
+    .left-section {
+        border-right: none;
+        border-bottom: 0.03rem solid var(--section-divider);
+        width: 100%;
+        height: fit-content;
+    }
+
+    .right-section {
+        width: 100%;
+        height: fit-content;
+    }
 }
