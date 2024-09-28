@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { ReactiveFormsModule, FormGroup, FormControl, Validators } from '@angular/forms';
 import { FormInputComponent } from "./form-input/form-input.component";
 import emailjs from '@emailjs/browser';
+import { ConstantsService } from '../constants/constants.service';
 
 @Component({
   selector: 'app-connect-with-me',
@@ -18,6 +19,8 @@ export class ConnectWithMeComponent {
   modalDisplayType = "none";
   formSubmissionSuccessfull = false;
   formSubmissionNotSuccessfull = false;
+
+  constructor(private _constants: ConstantsService) { }
 
   connectWithMeForm = new FormGroup({
     name: new FormControl('', [
@@ -47,8 +50,8 @@ export class ConnectWithMeComponent {
   }
 
   sendContactInfo() {
-    emailjs.init('wKP6VugKyi9QQCAiw');
-    emailjs.send("service_ten88fl", "template_947owhn", {
+    emailjs.init(this._constants.EMAILJS_INIT_KEY);
+    emailjs.send(this._constants.EMAILJS_SERVICE_KEY, this._constants.EMAILJS_TEMPLATE_KEY, {
       Name: this.connectWithMeForm.value.name,
       Email: this.connectWithMeForm.value.email,
       PhoneNumber: this.connectWithMeForm.value.phoneNumber,
