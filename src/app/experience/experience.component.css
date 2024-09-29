@@ -99,3 +99,31 @@
 .exp-details {
     font-weight: 450;
 }
+
+@media only screen and (max-width:600px) {
+    .container {
+        flex-direction: column;
+
+        overflow-y: scroll;
+    }
+
+    .experience-details {
+        width: 100%;
+    }
+
+    /*
+    .experience {
+        left: 5rem;
+    } */
+
+    .experience {
+        left: 1rem;
+        text-align: left;
+
+        &.top,
+        .middle,
+        .bottom {
+            top: 0;
+        }
+    }
+}

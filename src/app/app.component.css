@@ -95,5 +95,6 @@ title-text {
 
     .main-container section {
         height: 100vh;
+        padding: 2rem;
     }
 }
