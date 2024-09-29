@@ -103,7 +103,7 @@
 @media only screen and (max-width:600px) {
     .container {
         flex-direction: column;
-
+        height: 92%;
         overflow-y: scroll;
     }
 
@@ -111,19 +111,22 @@
         width: 100%;
     }
 
-    /*
-    .experience {
-        left: 5rem;
-    } */
+    .timeline-container {
+        align-items: start;
+    }
+
+    .timeline {
+        padding-left: 0.3rem;
+    }
 
     .experience {
         left: 1rem;
         text-align: left;
 
         &.top,
-        .middle,
-        .bottom {
-            top: 0;
+        &.middle,
+        &.bottom {
+            top: -12rem;
         }
     }
 }
