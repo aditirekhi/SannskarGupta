@@ -116,7 +116,12 @@
     }
 
     .timeline {
-        padding-left: 0.3rem;
+        padding-left: 0.2rem;
+    }
+
+    .ends {
+        height: 1rem;
+        width: 0.7rem;
     }
 
     .experience {
@@ -128,5 +133,13 @@
         &.bottom {
             top: -12rem;
         }
+    }
+
+    .small-screen-top {
+        top: -13rem !important;
+    }
+
+    .small-screen-bottom {
+        top: -14.5rem !important;
     }
 }

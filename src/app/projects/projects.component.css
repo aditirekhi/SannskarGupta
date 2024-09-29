@@ -14,3 +14,20 @@
     margin: 1rem 2rem;
     padding: 0 3rem;
 }
+
+@media only screen and (max-width:600px) {
+
+    .main-container {
+        height: 92%;
+        overflow-y: scroll;
+    }
+
+    .description {
+        padding: 0;
+        margin: 0 0.5rem;
+    }
+
+    .title {
+        margin: 0;
+    }
+}

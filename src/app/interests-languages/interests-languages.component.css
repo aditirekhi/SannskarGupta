@@ -9,3 +9,10 @@
     margin: 1rem 0;
     font-size: 1.2rem;
 }
+
+@media only screen and (max-width:600px) {
+    .info-list {
+        height: fit-content;
+        margin-bottom: 1.5rem;
+    }
+}

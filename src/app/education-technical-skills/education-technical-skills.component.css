@@ -33,3 +33,15 @@
     font-size: 1rem;
     color: var(--education-sub-header);
 }
+
+@media only screen and (max-width:600px) {
+
+    .info-list {
+        margin: 1.2rem 0;
+
+        &.education {
+            padding: 0;
+        }
+
+    }
+}
