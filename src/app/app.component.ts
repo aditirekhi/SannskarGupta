@@ -57,6 +57,9 @@ export class AppComponent {
   }
 
   scrollToTab(tab: HTMLElement) {
+    if (window.innerWidth < 600) {
+      this.showNavMenu = false;
+    }
     this.activeTabCheck(tab);
     tab.scrollIntoView();
   }

@@ -1,6 +1,7 @@
-<nav class="nav" #navMenu>
-  <button class="nav-button" (click)="!showNavMenu">Highlights</button>
-  <ul *ngIf="showNavMenu">
+<nav class="nav" [ngClass]="{'close':showNavMenu}" #navMenu>
+  <button class="nav-button" [ngClass]="{'nav-full-screen':showNavMenu}" (click)="showNavMenu=true"
+    *ngIf="showNavMenu==false">Highlights</button>
+  <ul *ngIf="showNavMenu==true">
     <li><button class="nav-btn" [ngClass]="{'nav-btn-active':homeTabActive}" (click)="scrollToTab(Home)"
         #homeNavBtn>Home</button></li>
     <li><button class="nav-btn" [ngClass]="{'nav-btn-active':experienceTabActive}" (click)="scrollToTab(Experience)"
@@ -16,6 +17,10 @@
     <li><button class="nav-btn" [ngClass]="{'nav-btn-active':connectWithMeTabActive}" (click)="scrollToTab(Connect)"
         #connectWithMeNavBtn>Connect With Me</button></li>
   </ul>
+  <button class="nav-button close" (click)="showNavMenu=false" *ngIf="showNavMenu==true">
+    <!-- <i class="fa fa-solid fa-xmark"></i> -->
+    Close
+  </button>
 </nav>
 <main class="main-container" #mainContainer>
   <section id="Home" #Home (wheel)="onScroll(Home)">
